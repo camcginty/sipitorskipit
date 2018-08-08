@@ -1,2 +1,47 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+h1 {
+  float: left;
+}
+
+.nav-link {
+  margin-top: 19px;
+}
+
+.button5 {
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.mainCardButtons {
+  padding: 20px;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+}
+
+.sip {
+  float: right;
+}
+
+.display {
+  border: 3px;
+  background-color: #f7f7ff;
+  border-color: #070600;
+  border-style: outset;
+  border-radius: 12px;
+}
+
+.drink-img {
+  margin: auto;
+  width: 415px;
+  height: 415px;
+  margin-top: 30px;
+  border: 2px;
+  background-color: #f7f7ff;
+  border-color: #070600;
+  border-style: outset;
+  border-radius: 12px;
+}

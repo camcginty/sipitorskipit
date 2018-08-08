@@ -1,4 +1,11 @@
 const store = require('./store')
+const showDrink = require('./templates/drink-display.handlebars')
+
+const getDrinkSuccess = function (getDrinkResponse) {
+  console.log(getDrinkResponse.drinks[0])
+  const showDrinkHtml = showDrink({ drink: getDrinkResponse.drinks })
+  $('.content').html(showDrinkHtml)
+}
 
 const signUpSuccess = function (signUpResponse) {
   // $('.SignUpFeedback').html('You have successfully registered.')
@@ -68,5 +75,6 @@ module.exports = {
   signInError,
   changePasswordSuccess,
   signOutSuccess,
-  changePasswordError
+  changePasswordError,
+  getDrinkSuccess
 }

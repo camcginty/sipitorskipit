@@ -3,6 +3,17 @@
 const config = require('./config.js')
 const store = require('./store')
 
+const getDrink = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/random'
+    // ,
+    // headers: {
+    //   Authorization: 'Token token=' + store.user.token
+    // }
+  })
+}
+
 // Auth requests below
 const signUp = function (data) {
   return $.ajax({
@@ -42,5 +53,6 @@ module.exports = {
   signIn,
   signUp,
   signOut,
-  changePassword
+  changePassword,
+  getDrink
 }

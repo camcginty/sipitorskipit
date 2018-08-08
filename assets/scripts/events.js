@@ -33,9 +33,17 @@ const onSignOut = function (event) {
     .catch(ui.signOutFail)
 }
 
+const randomDrink = function (event) {
+  event.preventDefault()
+  authApi.getDrink()
+    .then(ui.getDrinkSuccess)
+    .catch(ui.getDrinkFail)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  randomDrink
 }
