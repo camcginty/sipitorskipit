@@ -1,0 +1,40 @@
+{{#each drink as |drink|}}
+
+ <div class="display col-sm-12" data-id="{{drink.idDrink}}">
+
+     <div class="row">
+       <div class="col-sm-12"></div>
+       <div class="col align-self-end"><a href="#" class="delete-button" data-id="{{drink._id}}"></a></div>
+         <div class="col-sm-1">
+         </div>
+         <div class="col-sm-10">
+         <img class="drink-img" src={{drink.strDrinkThumb}}>
+       </div>
+         <div class="col-sm-1">
+         </div>
+       <br>
+     </div>
+     <div class="row">
+      <div class="col-sm-1">
+     <div class="col-sm-11">
+
+     </div>
+   </div>
+     <hr>
+     <div class="row">
+       <div class="col-sm-1">
+     </div>
+     <div class="col-sm-11">
+       <h3>Name: {{drink.strDrink}}</h3>
+       <br>
+       <h3>Main ingredient: {{drink.strIngredient1}}</h3>
+     </div>
+   </div>
+   <hr>
+
+   <button type="button" class="mainCardButtons skipButton"> <h3 class="cardButtonText">Skip</h3> </button>
+<button type="button" class="mainCardButtons sipButton"> <h3 class="cardButtonText">Sip</h3> </button>
+
+   </div>
+</div>
+{{/each}}
