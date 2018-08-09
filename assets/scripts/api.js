@@ -6,11 +6,10 @@ const store = require('./store')
 const getDrink = function () {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/random'
-    // ,
-    // headers: {
-    //   Authorization: 'Token token=' + store.user.token
-    // }
+    url: config.apiUrl + '/random',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
