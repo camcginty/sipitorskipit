@@ -3,8 +3,8 @@
  <div class="display col-sm-12" data-id="{{drink.idDrink}}">
 
      <div class="row">
-       <div class="col-sm-11"></div>
-       <div class="col align-self-end"><a href="#" class="delete-button" data-id="{{drink._id}}"><span class="glyphicon glyphicon-remove"></span></a></div>
+       <div class="col-sm-12"></div>
+       <div class="col align-self-end"><a href="#" class="delete-button" data-id="{{drink._id}}"></a></div>
          <div class="col-sm-1">
          </div>
          <div class="col-sm-10">
@@ -15,8 +15,9 @@
        <br>
      </div>
      <div class="row">
-     <div class="col-sm-12">
-       <p><span class="glyphicon glyphicon-cutlery"></span>  {{drink.strDrink}}</p>
+      <div class="col-sm-1">
+     <div class="col-sm-11">
+
      </div>
    </div>
      <hr>
@@ -24,13 +25,15 @@
        <div class="col-sm-1">
      </div>
      <div class="col-sm-11">
-       <p><span class="glyphicon glyphicon-map-marker"></span>{{drink.strIngredient1}}</p>
+       <h3>Name: {{drink.strDrink}}</h3>
+       <br>
+       <h3>Main ingredient: {{drink.strIngredient1}}</h3>
      </div>
    </div>
    <hr>
 
-   <button type="button" class="btn-primary mainCardButtons skipButton"> Skip! </button>
-<button type="button" class="btn-primary mainCardButtons sipButton"> Sip! </button>
+   <button type="button" class="mainCardButtons skipButton"> <h3 class="cardButtonText">Skip</h3> </button>
+<button type="button" class="mainCardButtons sipButton"> <h3 class="cardButtonText">Sip</h3> </button>
 
    </div>
 </div>

@@ -7,9 +7,12 @@ const events = require('./events')
 // require('./example')
 
 $(() => {
+  // Auth events
   $('#signUpForm').on('submit', events.onSignUp)
   $('#signInForm').on('submit', events.onSignIn)
   $('#password_change').on('submit', events.onChangePassword)
   $('#sign-out').click(events.onSignOut)
+  // Drink card events
   $('.button5').click(events.randomDrink)
+  $('.content').on('click', '.skipButton', events.randomDrink)
 })

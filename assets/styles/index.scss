@@ -2,8 +2,30 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+body {
+  background-color: #279af1;
+}
+
 h1 {
   float: left;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+.cardButtonText {
+  margin-top: 10px;
+  color: #f7f7ff;
+}
+
+.navbar {
+  border: 3px;
+  background-color: #f7f7ff;
+  border-color: #070600;
+  border-style: outset;
+  border-radius: 12px;
+  // box-shadow: 10px 5px 5px black;
 }
 
 .nav-link {
@@ -18,12 +40,21 @@ h1 {
 .mainCardButtons {
   padding: 20px;
   border-radius: 50%;
-  height: 75px;
-  width: 75px;
+  height: 125px;
+  width: 125px;
+  border-color: #070600;
+  margin-bottom: 15px;
 }
 
-.sip {
+.skipButton {
+  background-color: #23b5d3;
+  margin-left: 15px;
+}
+
+.sipButton {
   float: right;
+  background-color: #ea526f;
+  margin-right: 15px;
 }
 
 .display {
@@ -32,6 +63,7 @@ h1 {
   border-color: #070600;
   border-style: outset;
   border-radius: 12px;
+  box-shadow: 10px 5px 5px black;
 }
 
 .drink-img {
@@ -44,4 +76,8 @@ h1 {
   border-color: #070600;
   border-style: outset;
   border-radius: 12px;
+}
+
+.placeholder {
+  height: 1000px;
 }
