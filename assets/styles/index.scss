@@ -49,6 +49,7 @@ h3 {
 .skipButton {
   background-color: #23b5d3;
   margin-left: 15px;
+  float: left;
 }
 
 .sipButton {
@@ -80,4 +81,8 @@ h3 {
 
 .placeholder {
   height: 1000px;
+}
+
+.handlebars-add-form {
+  clear: right;
 }

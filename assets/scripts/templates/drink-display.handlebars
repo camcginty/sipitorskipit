@@ -33,7 +33,30 @@
    <hr>
 
    <button type="button" class="mainCardButtons skipButton"> <h3 class="cardButtonText">Skip</h3> </button>
-<button type="button" class="mainCardButtons sipButton"> <h3 class="cardButtonText">Sip</h3> </button>
+   <form class="handlebars-add-form">
+  <input type="hidden" name="drink[name]" value="{{drink.strDrink}}">
+  <input type="hidden" name="drink[alcoholic]" value="{{drink.strAlcoholic}}">
+  <input type="hidden" name="drink[img]" value="{{drink.strDrinkThumb}}">
+  <input type="hidden" name="drink[glass]" value="{{drink.strGlass}}">
+  <input type="hidden" name="drink[instructions]" value="{{drink.strInstructions}}">
+  <input type="hidden" name="drink[ingredient1]" value="{{drink.strMeasure1}} {{drink.strIngredient1}}">
+  <input type="hidden" name="drink[ingredient2]" value="{{drink.strMeasure2}} {{drink.strIngredient2}}">
+  <input type="hidden" name="drink[ingredient3]" value="{{drink.strMeasure3}} {{drink.strIngredient3}}">
+  <input type="hidden" name="drink[ingredient4]" value="{{drink.strMeasure4}} {{drink.strIngredient4}}">
+  <input type="hidden" name="drink[ingredient5]" value="{{drink.strMeasure5}} {{drink.strIngredient5}}">
+  <input type="hidden" name="drink[ingredient6]" value="{{drink.strMeasure6}} {{drink.strIngredient6}}">
+  <input type="hidden" name="drink[ingredient7]" value="{{drink.strMeasure7}} {{drink.strIngredient7}}">
+  <input type="hidden" name="drink[ingredient8]" value="{{drink.strMeasure8}} {{drink.strIngredient8}}">
+  <input type="hidden" name="drink[ingredient9]" value="{{drink.strMeasure9}} {{drink.strIngredient9}}">
+  <input type="hidden" name="drink[ingredient10]" value="{{drink.strMeasure10}} {{drink.strIngredient10}}">
+  <input type="hidden" name="drink[ingredient11]" value="{{drink.strMeasure11}} {{drink.strIngredient11}}">
+  <input type="hidden" name="drink[ingredient12]" value="{{drink.strMeasure12}} {{drink.strIngredient12}}">
+  <input type="hidden" name="drink[ingredient13]" value="{{drink.strMeasure13}} {{drink.strIngredient13}}">
+  <input type="hidden" name="drink[ingredient14]" value="{{drink.strMeasure14}} {{drink.strIngredient14}}">
+  <input type="hidden" name="drink[ingredient15]" value="{{drink.strMeasure15}} {{drink.strIngredient15}}">
+
+  <button type="submit" class="mainCardButtons sipButton"><h3 class="cardButtonText">Sip</h3></button>
+</form>
 
    </div>
 </div>
