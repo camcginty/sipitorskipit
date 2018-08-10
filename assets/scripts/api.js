@@ -27,8 +27,6 @@ const getRecipes = function () {
 }
 
 const updateRecipe = function (data, id) {
-  console.log('api id is ', id)
-  console.log('api data is', data)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/recipes/' + id,
@@ -52,7 +50,6 @@ const destroyRecipe = function (data) {
 // 3p API call
 
 const getDrink = function () {
-  console.log('hi')
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/random',

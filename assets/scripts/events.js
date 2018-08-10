@@ -25,7 +25,6 @@ const recipeUpdate = function () {
 const onCreateRecipe = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('card data is ', data)
   authApi.createRecipe(data)
     .then(ui.createRecipeSuccess)
     .catch(ui.createRecipeFailure)
@@ -44,7 +43,6 @@ const onUpdateRecipe = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   const id = $(this).data('id')
-  console.log('update data is', data)
   authApi.updateRecipe(data, id)
     .then(ui.updateRecipeSuccess)
     .then(recipeUpdate)
@@ -53,7 +51,6 @@ const onUpdateRecipe = function (event) {
 const showUpdateForm = function (event) {
   event.preventDefault()
   const data = $(this).data('id')
-  console.log('show form data is', data)
   $('.handlebars-form-hider-' + data).show()
   $('.handlebars-display-' + data).hide()
 }
