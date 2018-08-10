@@ -1,5 +1,6 @@
 const store = require('./store')
 const showDrink = require('./templates/drink-display.handlebars')
+const showRecipes = require('./templates/recipe-display.handlebars')
 
 const viewToggle = function () {
   $('.signed-in-view').toggle()
@@ -10,6 +11,12 @@ const getDrinkSuccess = function (getDrinkResponse) {
   console.log(getDrinkResponse.drinks[0])
   const showDrinkHtml = showDrink({ drink: getDrinkResponse.drinks })
   $('.content').html(showDrinkHtml)
+}
+
+const getRecipesSuccess = function (getRecipesResponse) {
+  console.log('get response is', getRecipesResponse)
+  const showRecipesHtml = showRecipes({recipe: getRecipesResponse.recipes})
+  $('.modal-content').html(showRecipesHtml)
 }
 
 const signUpSuccess = function (signUpResponse) {
@@ -78,5 +85,6 @@ module.exports = {
   changePasswordSuccess,
   signOutSuccess,
   changePasswordError,
-  getDrinkSuccess
+  getDrinkSuccess,
+  getRecipesSuccess
 }

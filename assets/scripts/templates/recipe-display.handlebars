@@ -1,0 +1,23 @@
+{{#each recipe as |recipe|}}
+
+ <div class="recipe-display col-sm-12" data-id="{{recipe.id}}">
+
+     <div class="row">
+       <img class="recipe-img" src={{recipe.img}}>
+       <div class="col-sm-11"></div>
+       <div class="col align-self-end"><a href="#" class="delete-button" data-id="{{recipe.id}}"><span class="
+glyphicon glyphicon-remove"></span></a></div>
+
+         <div class="col-sm-1">
+         </div>
+       <br>
+     </div>
+     <div class="row">
+      <div class="col-sm-1">
+     <div class="col-sm-11">
+
+     </div>
+   </div>
+   </div>
+</div>
+{{/each}}
