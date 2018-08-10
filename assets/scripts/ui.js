@@ -19,6 +19,10 @@ const getRecipesSuccess = function (getRecipesResponse) {
   $('.modal-content').html(showRecipesHtml)
 }
 
+const updateRecipeSuccess = function (updateRecipeResponse) {
+  console.log('update response is', updateRecipeResponse)
+}
+
 const signUpSuccess = function (signUpResponse) {
   // $('.SignUpFeedback').html('You have successfully registered.')
   $('#success').modal()
@@ -86,5 +90,6 @@ module.exports = {
   signOutSuccess,
   changePasswordError,
   getDrinkSuccess,
-  getRecipesSuccess
+  getRecipesSuccess,
+  updateRecipeSuccess
 }

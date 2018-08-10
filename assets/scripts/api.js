@@ -27,6 +27,8 @@ const getRecipes = function () {
 }
 
 const updateRecipe = function (data, id) {
+  console.log('api id is ', id)
+  console.log('api data is', data)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/recipes/' + id,

@@ -3,15 +3,24 @@
  <div class="recipe-display col-sm-12" data-id="{{recipe.id}}">
 
      <div class="row">
-       <img class="recipe-img" src={{recipe.img}}>
        <div class="col-sm-11"></div>
-       <div class="col align-self-end"><a href="#" class="delete-button" data-id="{{recipe.id}}"><span class="
+       <div class="col-sm-1 align-self-end"><a href="#" class="delete-button" data-id="{{recipe.id}}"><span class="
 glyphicon glyphicon-remove"></span></a></div>
+<img class="recipe-img" src={{recipe.img}}>
 
          <div class="col-sm-1">
          </div>
-       <br>
-     </div>
+         <h3>{{recipe.name}}</h3>
+         <h2>
+         <form class="add-note-form" data-id="{{recipe.id}}">
+    <p class="handlebars-display"></span>Notes: {{recipe.notes}}</p>
+    <input class="handlebars-form-hider handlebars-form-hider-{{recipe.id}}" name="recipe[notes]" type="text" placeholder="{{recipe.notes}}">
+  <button class="handlebars-update-button handlebars-display handlebars-display-{{recipe.id}}" data-id="{{recipe.id}}">Add Note</button>
+  <button class="handlebars-submit-button handlebars-form-hider handlebars-form-hider-{{recipe.id}}" type="submit" data-id="{{recipe.id}}">Submit Note</button>
+</div>
+</form>
+       </div>
+         <h2></h2>
      <div class="row">
       <div class="col-sm-1">
      <div class="col-sm-11">

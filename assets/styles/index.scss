@@ -125,5 +125,14 @@ h3 {
 }
 
 .delete-button {
+  float: right;
   clear: left;
 }
+
+.handlebars-form-hider {
+  display: none;
+}
+
+// .clearMe {
+//   clear: right;
+// }

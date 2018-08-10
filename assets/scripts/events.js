@@ -16,6 +16,12 @@ const onGetRecipes = function (event) {
     .catch(ui.getRecipesFailure)
 }
 
+const recipeUpdate = function () {
+  authApi.getRecipes()
+    .then(ui.getRecipesSuccess)
+    .catch(ui.getRecipesFailure)
+}
+
 const onCreateRecipe = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -24,6 +30,32 @@ const onCreateRecipe = function (event) {
     .then(ui.createRecipeSuccess)
     .catch(ui.createRecipeFailure)
     .then(sipClickRandomDrink)
+}
+
+const onDestroyRecipe = function (event) {
+  event.preventDefault()
+  const data = $(this).data('id')
+  authApi.destroyRecipe(data)
+    .then(ui.destroyRecipeSuccess)
+    .then(recipeUpdate)
+    .catch(ui.destroyRecipeFailure)
+}
+const onUpdateRecipe = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  const id = $(this).data('id')
+  console.log('update data is', data)
+  authApi.updateRecipe(data, id)
+    .then(ui.updateRecipeSuccess)
+    .then(recipeUpdate)
+    .catch(ui.updateRecipeFail)
+}
+const showUpdateForm = function (event) {
+  event.preventDefault()
+  const data = $(this).data('id')
+  console.log('show form data is', data)
+  $('.handlebars-form-hider-' + data).show()
+  $('.handlebars-display-' + data).hide()
 }
 
 // 3p API event
@@ -83,5 +115,8 @@ module.exports = {
   randomDrink,
   onCreateRecipe,
   toggle,
-  onGetRecipes
+  onGetRecipes,
+  onUpdateRecipe,
+  onDestroyRecipe,
+  showUpdateForm
 }

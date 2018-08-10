@@ -19,4 +19,7 @@ $(() => {
   $('.content').on('submit', '.handlebars-add-form', events.onCreateRecipe)
   // Recipe Events
   $('#mySippedDrinks').click(events.onGetRecipes)
+  $('.modal-content').on('click', '.delete-button', events.onDestroyRecipe)
+  $('.modal-content').on('submit', '.add-note-form', events.onUpdateRecipe)
+  $('.modal-content').on('click', '.handlebars-update-button', events.showUpdateForm)
 })
