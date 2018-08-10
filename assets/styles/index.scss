@@ -67,6 +67,16 @@ h3 {
   box-shadow: 10px 5px 5px black;
 }
 
+.recipe-display {
+  min-height: 305px;
+  border: 4px;
+  background-color: #f7f7ff;
+  border-color: #070600;
+  border-style: outset;
+  border-radius: 12px;
+  box-shadow: 10px 5px 5px black;
+}
+
 .drink-img {
   margin: auto;
   width: 415px;
@@ -98,21 +108,22 @@ h3 {
 .signed-in-vew {
   display: none;
 }
-//
-// #mySippedDrinks {
-//   padding: 15px;
-//   margin-top: 19px;
-//   display: none;
-// }
-//
-// #signOut {
-//   padding: 15px;
-//   margin-top: 19px;
-//   display: none;
-// }
-//
-// #changePassword {
-//   padding: 15px;
-//   margin-top: 19px;
-//   display: none;
-// }
+
+.modal-display {
+  min-height: 500px;
+}
+
+.recipe-img {
+  height: 310px;
+  width: 310px;
+  float: left;
+  border: 5px;
+  background-color: #f7f7ff;
+  border-color: #070600;
+  border-style: outset;
+  border-radius: 12px;
+}
+
+.delete-button {
+  clear: left;
+}

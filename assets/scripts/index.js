@@ -17,4 +17,6 @@ $(() => {
   $('.button5').click(events.randomDrink)
   $('.content').on('click', '.skipButton', events.randomDrink)
   $('.content').on('submit', '.handlebars-add-form', events.onCreateRecipe)
+  // Recipe Events
+  $('#mySippedDrinks').click(events.onGetRecipes)
 })

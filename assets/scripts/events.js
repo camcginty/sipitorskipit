@@ -9,6 +9,13 @@ const toggle = function () {
   // $('#changePassword').hide()
 }
 
+const onGetRecipes = function (event) {
+  event.preventDefault()
+  authApi.getRecipes()
+    .then(ui.getRecipesSuccess)
+    .catch(ui.getRecipesFailure)
+}
+
 const onCreateRecipe = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -75,5 +82,6 @@ module.exports = {
   onSignOut,
   randomDrink,
   onCreateRecipe,
-  toggle
+  toggle,
+  onGetRecipes
 }
