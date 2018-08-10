@@ -78,6 +78,8 @@ const signOutSuccess = function (signOutResponse) {
   viewToggle()
   $('#password_change')[0].reset()
   $('#signUpForm')[0].reset()
+  $('.content').html('')
+  $('.modal-content').html('')
   delete store.user
 }
 
