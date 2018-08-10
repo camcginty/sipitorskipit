@@ -14,7 +14,7 @@ const getDrinkSuccess = function (getDrinkResponse) {
 
 const getRecipesSuccess = function (getRecipesResponse) {
   const showRecipesHtml = showRecipes({recipe: getRecipesResponse.recipes})
-  $('.modal-content').html(showRecipesHtml)
+  $('.recipes-modal-content').html(showRecipesHtml)
 }
 
 const updateRecipeSuccess = function (updateRecipeResponse) {
@@ -76,7 +76,7 @@ const signOutSuccess = function (signOutResponse) {
   $('#password_change')[0].reset()
   $('#signUpForm')[0].reset()
   $('.content').html('')
-  $('.modal-content').html('')
+  $('.recipes-modal-content').html('')
   delete store.user
 }
 
