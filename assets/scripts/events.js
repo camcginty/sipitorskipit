@@ -2,6 +2,40 @@ const authApi = require('./api')
 const ui = require('./ui')
 const getFormFields = require('../../lib/get-form-fields')
 
+const toggle = function () {
+  $('.signed-in-view').hide()
+  // $('#signOut').hide()
+  // $('#mySippedDrinks').hide()
+  // $('#changePassword').hide()
+}
+
+const onCreateRecipe = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log('card data is ', data)
+  authApi.createRecipe(data)
+    .then(ui.createRecipeSuccess)
+    .catch(ui.createRecipeFailure)
+    .then(sipClickRandomDrink)
+}
+
+// 3p API event
+
+const sipClickRandomDrink = function () {
+  authApi.getDrink()
+    .then(ui.getDrinkSuccess)
+    .catch(ui.getDrinkFail)
+}
+
+const randomDrink = function (event) {
+  event.preventDefault()
+  authApi.getDrink()
+    .then(ui.getDrinkSuccess)
+    .catch(ui.getDrinkFail)
+}
+
+// Auth Events
+
 const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -16,6 +50,7 @@ const onSignIn = function (event) {
   authApi.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInError)
+    .then(sipClickRandomDrink)
 }
 
 const onChangePassword = function (event) {
@@ -33,17 +68,12 @@ const onSignOut = function (event) {
     .catch(ui.signOutFail)
 }
 
-const randomDrink = function (event) {
-  event.preventDefault()
-  authApi.getDrink()
-    .then(ui.getDrinkSuccess)
-    .catch(ui.getDrinkFail)
-}
-
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
-  randomDrink
+  randomDrink,
+  onCreateRecipe,
+  toggle
 }

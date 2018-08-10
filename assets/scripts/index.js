@@ -7,6 +7,7 @@ const events = require('./events')
 // require('./example')
 
 $(() => {
+  $(document).ready(events.toggle)
   // Auth events
   $('#signUpForm').on('submit', events.onSignUp)
   $('#signInForm').on('submit', events.onSignIn)
@@ -15,4 +16,5 @@ $(() => {
   // Drink card events
   $('.button5').click(events.randomDrink)
   $('.content').on('click', '.skipButton', events.randomDrink)
+  $('.content').on('submit', '.handlebars-add-form', events.onCreateRecipe)
 })

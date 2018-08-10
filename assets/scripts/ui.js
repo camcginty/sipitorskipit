@@ -1,6 +1,11 @@
 const store = require('./store')
 const showDrink = require('./templates/drink-display.handlebars')
 
+const viewToggle = function () {
+  $('.signed-in-view').toggle()
+  $('.signed-out-view').toggle()
+}
+
 const getDrinkSuccess = function (getDrinkResponse) {
   console.log(getDrinkResponse.drinks[0])
   const showDrinkHtml = showDrink({ drink: getDrinkResponse.drinks })
@@ -28,8 +33,10 @@ const signInSuccess = function (response) {
   // $('#sign-up-form').toggle()
   $('.emailDisplay').html('Signed in as: ' + store.user.email)
   $('#signInForm')[0].reset()
-  // $('.signed-in-view').toggle()
-  // $('.signed-out-view').toggle()
+  viewToggle()
+  $('.signed-in-view').show()
+  // $('#signUp').toggle()
+  // $('#login').toggle()
 }
 
 const signInError = function (error) {
@@ -52,17 +59,12 @@ const changePasswordError = function () {
 }
 
 const signOutSuccess = function (signOutResponse) {
-  // $('#sign-in-form').toggle()
-  // $('#change-password-form').toggle()
-  // $('#sign-out-button').toggle()
-  // $('#sign-up-form').toggle()
   $('.createRestaurantFeedback').html('')
   $('.emailDisplay').html('')
   $('.signInFeedback').html('')
   $('.ChangePasswordFeedback').html('')
   $('.SignUpFeedback').html('')
-  // $('.signed-in-view').toggle()
-  // $('.signed-out-view').toggle()
+  viewToggle()
   $('#password_change')[0].reset()
   $('#signUpForm')[0].reset()
   delete store.user
