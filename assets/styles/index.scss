@@ -122,17 +122,18 @@ h3 {
   border-color: #070600;
   border-style: outset;
   border-radius: 12px;
+  clear: right;
 }
 
 .delete-button {
-  float: right;
-  clear: left;
+  // float: right;
+  // clear: left;
+}
+
+.delete-column {
+  padding: 0;
 }
 
 .handlebars-form-hider {
   display: none;
 }
-
-// .recipes-modal-content {
-//   min-height: 100px;
-// }
