@@ -118,12 +118,11 @@ h3 {
   height: 310px;
   width: 310px;
   float: left;
-  border-right: 5px;
-  border-bottom: 5px;
+  border-width: 1px 3px 3px 1px;
   background-color: #f7f7ff;
   border-color: #070600;
   border-style: outset;
-  border-radius: 12px;
+  border-radius: 6px 0 12px 0;
   clear: right;
 }
 
