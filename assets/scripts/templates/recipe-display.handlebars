@@ -30,6 +30,7 @@ glyphicon glyphicon-remove"></span></a>
       </div>
     </div>
     </div>
+    <div class="recipe-card-indent">
     <h4>Instructions: {{recipe.instructions}}</h4>
     <form class="add-note-form" data-id="{{recipe.id}}">
       <p class="handlebars-display">
@@ -37,13 +38,10 @@ glyphicon glyphicon-remove"></span></a>
       <input class="handlebars-form-hider handlebars-form-hider-{{recipe.id}}" name="recipe[notes]" type="text" placeholder="{{recipe.notes}}">
       <button class="handlebars-update-button handlebars-display handlebars-display-{{recipe.id}}" data-id="{{recipe.id}}">Add Note</button>
       <button class="handlebars-submit-button handlebars-form-hider handlebars-form-hider-{{recipe.id}}" type="submit" data-id="{{recipe.id}}">Submit Note</button>
-  </div>
   </form>
+</div>
 
 
 
-  </div>
-  </div>
-  </div>
   </div>
 {{/each}}
