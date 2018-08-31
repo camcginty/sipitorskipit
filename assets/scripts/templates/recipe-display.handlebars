@@ -20,14 +20,6 @@
                           <h4>{{recipe.ingredient10}}</h4>
 
             </div>
-      <div class="col-sm-1 delete-column">
-        <div class="row">
-        <div class="col-sm-10"> </div>
-        <div class="col-sm-2">
-        <a href="#" class="delete-button" data-id="{{recipe.id}}"><span class="glyphicon glyphicon-remove"></span></a>
-</div>
-      </div>
-    </div>
     </div>
     <div class="recipe-card-indent">
     <h4>Instructions: {{recipe.instructions}}</h4>
@@ -35,8 +27,11 @@
       <p class="handlebars-display">
         </span>Notes: {{recipe.notes}}</p>
       <input class="handlebars-form-hider handlebars-form-hider-{{recipe.id}}" name="recipe[notes]" type="text" placeholder="{{recipe.notes}}">
-      <button class="handlebars-update-button handlebars-display handlebars-display-{{recipe.id}}" data-id="{{recipe.id}}">Add Note</button>
-      <button class="handlebars-submit-button handlebars-form-hider handlebars-form-hider-{{recipe.id}}" type="submit" data-id="{{recipe.id}}">Submit Note</button>
+      <div class="row">
+      <button class="handlebars-update-button btn-primary handlebars-display handlebars-display-{{recipe.id}}" data-id="{{recipe.id}}">Add Note</button>
+      <button class="handlebars-submit-button btn-primary handlebars-form-hider handlebars-form-hider-{{recipe.id}}" type="submit" data-id="{{recipe.id}}">Submit Note</button>
+      <button class="delete-button btn-primary" data-id="{{recipe.id}}">Delete Recipe</button>
+    </div>
   </form>
 </div>
 
